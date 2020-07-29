@@ -13,6 +13,10 @@ class VaultController extends Controller
     {
         return view('index');
     }
+    public function expired()
+    {
+        return view('expired');
+    }
 
     public function store(Request $request)
     {
