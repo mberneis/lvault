@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::GET('/', 'VaultController@index');
+Route::POST('/', 'VaultController@store');
+Route::GET('view/{key}', 'VaultController@show');
+Route::GET('/expired', 'VaultController@expired');
